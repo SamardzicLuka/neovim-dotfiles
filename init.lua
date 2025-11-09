@@ -15,6 +15,14 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+vim.keymap.set("i", "<C-s>", function()
+  vim.lsp.buf.signature_help()
+end, { silent = true })
+
+vim.diagnostic.config({
+  virtual_text = true,
+})
+
 require("auto-template")
 require("vim-options")
 require("lazy").setup("plugins")

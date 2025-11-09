@@ -43,4 +43,18 @@ return {
 			})
 		end,
 	},
+    {
+    -- Diagnostic keymaps defined here
+        "nvim-lua/plenary.nvim", -- Dummy plugin to hang keymaps onto
+        lazy = false,
+        config = function()
+            vim.keymap.set("n", "<leader>dq", function()
+                vim.diagnostic.setqflist()
+            end, { desc = "Add diagnostics to quickfix list" })
+
+            -- vim.keymap.set("n", "<leader>dt", function()
+            --     vim.diagnostic.config({ virtual_text = true })
+            -- end, { desc = "Enable virtual text diagnostics" })
+        end,
+    }
 }

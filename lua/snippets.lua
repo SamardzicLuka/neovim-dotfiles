@@ -14,3 +14,9 @@ ls.add_snippets("javascript", {
     t({'app.get("", (req, res) => {', '  ', '})'}),
   }),
 })
+
+ls.add_snippets("cpp", {
+  s("vvint", {
+    t("vector<vector<int>>"),
+  }),
+})

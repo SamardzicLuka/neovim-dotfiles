@@ -10,7 +10,7 @@ return {
         config = function()
             require("mason-lspconfig").setup({
  -- mason lspconfig github for all language servers available               
-                ensure_installed = {"lua_ls","ts_ls", "bashls", "clangd", "ast_grep"}
+                ensure_installed = {"lua_ls","ts_ls", "bashls", "clangd", "ast_grep", "pylsp"}
             })
         end
     },
